@@ -1,0 +1,17 @@
+version: '2.4'
+
+services:
+
+  golang-example-use-private-repo-container-1:
+    container_name: golang-example-use-private-repo-container-1
+    build:
+      context: container-1
+      args:
+        ID_RSA: "${ID_RSA}"
+
+  golang-example-use-private-repo-container-2:
+    container_name: golang-example-use-private-repo-container-2
+    build:
+      context: container-2
+      args:
+        ID_RSA: "${ID_RSA}"
